@@ -6,11 +6,11 @@ const nextConfig = {
     return [
       {
         source: "/api/reset/:token",
-        destination: "http://localhost:3001/api/reset/:token", // Proxy to Backend
+        destination: "https://publication-portal-be.onrender.com/api/reset/:token", // Proxy to Backend
       },
       {
         source: "/api/login",
-        destination: "http://localhost:3001/api/login", // Proxy to Backend
+        destination: "https://publication-portal-be.onrender.com/api/login", // Proxy to Backend
       },
     ];
   },

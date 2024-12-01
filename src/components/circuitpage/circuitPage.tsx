@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import axios from 'axios';
 import './circuitPage.css';
 import { useSearchParams } from 'next/navigation';
@@ -15,8 +15,8 @@ export interface Connector {
   numberOfPins: number;
   color: string;
   partNumber: string;
-  powerSupply: string,
-  location: string
+  powerSupply: string;
+  location: string;
   imageUrl: string;
 }
 
@@ -32,7 +32,7 @@ const CircuitPageContent: React.FC = () => {
   const [highlightedText, setHighlightedText] = useState<string | null>(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/ml/connectors')
+    axios.get('https://publication-portal-be.onrender.com/api/ml/connectors')
       .then(response => {
         setConnectors(response.data.connectors);
       })
@@ -238,4 +238,10 @@ const CircuitPageContent: React.FC = () => {
   );
 };
 
-export default CircuitPageContent;
+const SuspendedCircuitPageContent = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <CircuitPageContent />
+  </Suspense>
+);
+
+export default SuspendedCircuitPageContent;

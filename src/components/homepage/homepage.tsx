@@ -32,7 +32,7 @@ interface VehicleData {
     useEffect(() => {
       const fetchVehicles = async () => {
         try {
-          const response = await axios.get("http://localhost:3001/api/vehicles/getVehicles");
+          const response = await axios.get("https://publication-portal-be.onrender.com/api/vehicles/getVehicles");
           setVehicles(response.data.data);
         } catch (error) {
           console.error("Error fetching vehicle data:", error);

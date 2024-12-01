@@ -641,4 +641,5 @@ interface SvgDoorCircuitProps extends React.SVGProps<SVGSVGElement> {
   );
 });
 
+Circuit2.displayName = 'Circuit2';
 export default Circuit2;
