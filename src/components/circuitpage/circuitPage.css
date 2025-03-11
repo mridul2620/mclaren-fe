@@ -109,16 +109,18 @@
     padding: 2px;
 }
 
-.schematics-tab,
-.connectors-tab {
-    list-style-type: circle;
-    padding: 0;
-    margin: 0;
+.loading-indicator {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
 }
 
-.schematics-tab li:active,
-.connectors-tab li:active{
-    color: blue;
+.schematics-tab,
+.connectors-tab {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .schematics-tab li,
@@ -136,6 +138,14 @@
 .schematics-tab li:hover,
 .connectors-tab li:hover {
     background-color: #f0f4f8;
+}
+
+.schematics-tab li.active,
+.connectors-tab li.active {
+    background-color: #e6f0ff;
+    color: #007bff;
+    font-weight: 500;
+    border-left: 3px solid #007bff;
 }
 
 .schematic-image {
@@ -157,6 +167,7 @@
     right: 20px;
     display: flex;
     gap: 10px;
+    z-index: 100;
 }
 
 .zoom-button {
@@ -203,52 +214,238 @@
 }
 
 .connector-details {
-    padding: 25px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 0; /* Remove border radius */
+    box-shadow: none; /* Remove box shadow */
+    max-width: 100%; /* Allow full width */
+    margin: 0; /* Remove auto margin */
 }
 
+/* Improved header styling */
+.connector-details h3 {
+    margin-bottom: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.connector-details h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 60px;
+    height: 2px;
+    background-color: #2563eb;
+}
+
+/* Enhanced connector image container */
 .connector-image {
     display: flex;
     justify-content: center;
-    max-height: auto;
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
 .connector-details img {
-    width: 500px;
+    width: 550px;
     max-width: 100%;
-    height: 100%;
-    border: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
 }
 
-.connector-details h3 {
+.connector-details img:hover {
+    transform: scale(1.02);
+}
+
+
+.connector-info {
+    background-color: #fff; /* Change from #f8fafc to white */
+    border-radius: 0; /* Remove rounded corners */
+    padding: 20px 0; /* Remove horizontal padding, keep vertical */
+    margin-bottom: 30px;
+    border-left: none; /* Remove the blue border */
+    box-shadow: none; /* Remove shadow */
+}
+
+.info-row {
+    display: flex;
     margin-bottom: 16px;
+    font-size: 15px;
     font-family: "Inter", sans-serif;
-    font-size: 20px;
-    color: #333;
-    font-weight: 600;
+    line-height: 1.5;
+    align-items: flex-start;
 }
 
-.connector-details p {
-    margin-bottom: 15px;
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
-    color: #666;
-    line-height: 1.2;
+.info-row:last-child {
+    margin-bottom: 0;
 }
 
-.connector-details strong {
-    color: #000000;
+.info-label {
+    flex: 0 0 200px;
     font-weight: 500;
+    color: #4b5563;
+    padding-right: 15px;
+}
+
+.info-value {
+    flex: 1;
+    color: #1f2937;
+    word-wrap: break-word;
+    font-weight: 400;
+    background-color: #ffffff;
+    padding: 5px 0; /* Remove horizontal padding */
+    border-radius: 0; /* Remove rounded corners */
+    border: none; /* Remove border */
+}
+
+/* Enhanced section headers */
+.connector-details h4 {
+    margin: 35px 0 18px 0;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #1e3a8a;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+}
+
+.connector-details h4::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #3b82f6;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+/* Enhanced tables */
+.table-container {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.fit-part-table, 
+.legend-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14px;
+    margin-top: 0px;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.fit-part-table th,
+.legend-table th {
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.fit-part-table td,
+.legend-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #4b5563;
+    transition: background-color 0.2s ease;
+}
+
+.fit-part-table tr:last-child td,
+.legend-table tr:last-child td {
+    border-bottom: none;
+}
+.fit-part-table td{
+    text-align: center;
+}
+
+.fit-part-table tr:hover td,
+.legend-table tr:hover td {
+    background-color: #f1f5f9;
+}
+
+.legend-table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Zebra striping for better readability */
+.fit-part-table tr:nth-child(even),
+.legend-table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Better styling for no data */
+.no-data {
+    text-align: center;
+    color: #6b7280;
+    padding: 30px !important;
+    font-style: italic;
+    background-color: #fff; /* Change from #f9fafb to white */
 }
 
 /* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .panels-container {
+        flex-direction: column;
+    }
+    
+    .left-panel {
+        width: 100%;
+        max-height: 300px;
+    }
+    
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .info-label {
+        margin-bottom: 8px;
+        flex: none;
+    }
+    
+    .info-value {
+        width: 100%;
+    }
+    
+    .connector-image {
+        padding: 15px;
+    }
+}
 
 @media (max-width: 768px) {
     .left-panel {
         width: 100%;
         border-right: none;
         padding: 10px;
+        max-height: 250px;
     }
 
     .right-panel {
@@ -262,6 +459,34 @@
 
     .schematic-image img {
         max-height: 400px;
+    }
+
+    .connector-details {
+        padding: 15px;
+    }
+    
+    .connector-details h3 {
+        font-size: 20px;
+    }
+    
+    .connector-details h4 {
+        font-size: 16px;
+    }
+    
+    .table-container {
+        padding: 15px;
+    }
+    
+    .fit-part-table th,
+    .legend-table th {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    
+    .fit-part-table td,
+    .legend-table td {
+        padding: 8px;
+        font-size: 13px;
     }
 }
 
@@ -285,4 +510,43 @@
         bottom: 10px;
         right: 10px;
     }
+    
+    .connector-details {
+        padding: 15px;
+    }
+    
+    .connector-image {
+        margin: 20px 0;
+        padding: 10px;
+    }
+    
+    .info-label, .info-value {
+        font-size: 14px;
+    }
+}
+
+.legend-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+    background-color: #f5f7fa;
+}
+
+.legend-table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 4px;
+}
+
+.legend-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+}
+
+/* Empty state improvement */
+.table-container .no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    background-color: #f8fafc;
+    border-radius: 6px;
+    color: #64748b;
+    font-size: 15px;
 }

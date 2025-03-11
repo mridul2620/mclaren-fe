@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?altova_sps https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.sps?>
+<unit id="D040606-A000001" docno="D040606" lang="en-GB" valid-for="6" d1p1:noNamespaceSchemaLocation="https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+	<!--Created from D-WO-0000011:1:15 -->
+	<title>MB137</title>
+	<subtitle>Control Unit - Switch Control Unit Gateway - Connector MB137 - connector to OBD2 Diagnostic
+</subtitle>
+	<pin>
+		<figure>
+			<title>PIN</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G012762-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+			<legend>
+				<custom-legend>
+					<callout>
+						<title>1</title>
+						<callout-text>Chassis/Powertrain CAN H</callout-text>
+					</callout>
+					<callout>
+						<title>2</title>
+						<callout-text>Chassis/Powertrain CAN L</callout-text>
+					</callout>
+					<callout>
+						<title>3</title>
+						<callout-text>OBD H</callout-text>
+					</callout>
+					<callout>
+						<title>4</title>
+						<callout-text>OBD L</callout-text>
+					</callout>
+					<callout>
+						<title>5</title>
+						<callout-text>Body CAN H</callout-text>
+					</callout>
+					<callout>
+						<title>6</title>
+						<callout-text>Body CAN L</callout-text>
+					</callout>
+					<callout>
+						<title>7</title>
+						<callout-text>Chassis/Powertrain CAN H</callout-text>
+					</callout>
+					<callout>
+						<title>8</title>
+						<callout-text>Chassis/Powertrain CAN L</callout-text>
+					</callout>
+					<callout>
+						<title>9</title>
+						<callout-text>LIN Bus A (SCG)</callout-text>
+					</callout>
+					<callout>
+						<title>10</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>11</title>
+						<callout-text>Body CAN H</callout-text>
+					</callout>
+					<callout>
+						<title>12</title>
+						<callout-text>Body CAN L</callout-text>
+					</callout>
+				</custom-legend>
+			</legend>
+		</figure>
+	</pin>
+	<location>
+		<figure>
+			<title>LOCATION</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G015792-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+		</figure>
+	</location>
+</unit>

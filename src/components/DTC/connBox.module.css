@@ -1,0 +1,280 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+  backdrop-filter: blur(3px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease-out;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modalHeader {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  background-color: #f9f9f9;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modalHeader p {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.closeButton {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #6b7280;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: #1a202c;
+}
+
+.imagesContainer {
+  display: flex;
+  padding: 20px;
+  gap: 16px;
+  background-color: #f5f7fa;
+  flex-wrap: wrap;
+}
+
+.imageBox {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.connectorImage {
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  transition: transform 0.2s;
+  cursor: zoom-in;
+}
+
+.connectorImage:hover {
+  transform: scale(1.02);
+}
+
+.noImage {
+  padding: 40px;
+  color: #9ca3af;
+  font-style: italic;
+  text-align: center;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.zoomedImageContainer {
+  position: relative;
+  background-color: transparent;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.zoomedImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  background-color: white;
+  cursor: zoom-out;
+}
+
+.modalTabs {
+  display: flex;
+  border-bottom: 1px solid #eaeaea;
+  background-color: white;
+  padding: 0 12px;
+}
+
+.tabButton {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #6b7280;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  margin-right: 4px;
+}
+
+.tabButton:hover {
+  color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.activeTab {
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
+  font-weight: 600;
+}
+
+.activeTab:hover {
+  background-color: rgba(59, 130, 246, 0.08);
+}
+
+.tabContent {
+  padding: 24px;
+}
+
+.pinsContainer {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pinsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pinsTable th,
+.pinsTable td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.pinsTable th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: #475569;
+  white-space: nowrap;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pinsTable tr:not(:last-child) td {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pinsTable tbody tr {
+  transition: background-color 0.15s;
+}
+
+.pinsTable tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.inactivePin {
+  color: #94a3b8;
+  background-color: #f9fafb;
+}
+
+/* Scrollbar styling */
+.modalContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .modalContent {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .imagesContainer {
+    flex-direction: column;
+  }
+  
+  .imageBox {
+    min-width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .modalHeader h2 {
+    padding-right: 30px;
+  }
+}

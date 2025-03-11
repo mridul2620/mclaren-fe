@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?altova_sps https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.sps?>
+<unit id="D040368-A000001" docno="D040368" lang="en-GB" valid-for="6" d1p1:noNamespaceSchemaLocation="https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+	<!--Created from D-WO-0000009:1:16 -->
+	<title>12MB17
+</title>
+	<subtitle>TCU 
+</subtitle>
+	<pin>
+		<figure>
+			<title>PIN</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G009769-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+			<legend>
+				<custom-legend>
+					<callout>
+						<title>1</title>
+						<callout-text>KL 87</callout-text>
+					</callout>
+					<callout>
+						<title>2</title>
+						<callout-text>KL 87</callout-text>
+					</callout>
+					<callout>
+						<title>3</title>
+						<callout-text>KL 87</callout-text>
+					</callout>
+					<callout>
+						<title>4</title>
+						<callout-text>KL 87</callout-text>
+					</callout>
+					<callout>
+						<title>5</title>
+						<callout-text>PWR GND - Actuator RTN Current</callout-text>
+					</callout>
+					<callout>
+						<title>6</title>
+						<callout-text>PWR GND - Actuator RTN Current</callout-text>
+					</callout>
+					<callout>
+						<title>7</title>
+						<callout-text>KL 31 - Unit Ground</callout-text>
+					</callout>
+					<callout>
+						<title>8</title>
+						<callout-text>KL 30 Unit Perm Supply</callout-text>
+					</callout>
+					<callout>
+						<title>9</title>
+						<callout-text>LS24 - RR Wing Lift Upper Left Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>10</title>
+						<callout-text>LS26 - RR Wing Pitch Lower Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>11</title>
+						<callout-text>LS27 - Rear Wing Multiplex Left Raise Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>12</title>
+						<callout-text>HS24 - RR Wing Lift Upper Left Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>13</title>
+						<callout-text>LS</callout-text>
+					</callout>
+					<callout>
+						<title>14</title>
+						<callout-text>LS16 - RR Wing Lift Up RH Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>15</title>
+						<callout-text>LS13 - RR Wing Lift Low RH Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>16</title>
+						<callout-text>LS28 - RR Wing Multiplex  Sec Retract Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>17</title>
+						<callout-text>LS25 - RR Wing Multiplex Sec Raise Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>18</title>
+						<callout-text>LS23 - RR Wing Lift Lower Left Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>19</title>
+						<callout-text>LS27 - RR Wing Pitch Upper Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>20</title>
+						<callout-text>C01</callout-text>
+					</callout>
+					<callout>
+						<title>21</title>
+						<callout-text>LS 31 Main Relay Drive</callout-text>
+					</callout>
+					<callout>
+						<title>22</title>
+						<callout-text>LS22 - RR Wing Multiplex Left Retract Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>23</title>
+						<callout-text>HS26 - RR Wing Pitch Lower Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>24</title>
+						<callout-text>HS21 - Rear Wing Multiplex Left Raise Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>25</title>
+						<callout-text>HS22 - Rear Wing Multiplex Left Retract Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>26</title>
+						<callout-text>HS</callout-text>
+					</callout>
+					<callout>
+						<title>27</title>
+						<callout-text>HS16 - RR Wing Lift Up RH Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>28</title>
+						<callout-text>HS13 - RR Wing Lift Low RH Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>29</title>
+						<callout-text>HS28 - RR Wing Multiplex Sec Retract Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>30</title>
+						<callout-text>HS25 - RR Wing Multiplex Sec Raise Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>31</title>
+						<callout-text>HS23 - Rear Wing Lift Lower Left Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>32</title>
+						<callout-text>HS27 - RR Wing Pitch Upper Chamber Lock Solenoid</callout-text>
+					</callout>
+					<callout>
+						<title>33</title>
+						<callout-text>AI8 - 0</callout-text>
+					</callout>
+					<callout>
+						<title>34</title>
+						<callout-text>Ground Gear Shift SW RTN</callout-text>
+					</callout>
+					<callout>
+						<title>35</title>
+						<callout-text>SNS GND - Reserve - Active Aero Spare Sensor RTN</callout-text>
+					</callout>
+					<callout>
+						<title>36</title>
+						<callout-text>SNS GND - Aero Position Sensor Pitch 2 Return</callout-text>
+					</callout>
+					<callout>
+						<title>37</title>
+						<callout-text>SNS GND - Aero System Pressure Sensor Return</callout-text>
+					</callout>
+					<callout>
+						<title>38</title>
+						<callout-text>SNS GND - Aero Pos Sensor Pitch 1 RTN</callout-text>
+					</callout>
+					<callout>
+						<title>39</title>
+						<callout-text>GND Oil Level RTN</callout-text>
+					</callout>
+					<callout>
+						<title>40</title>
+						<callout-text>Sensor Ground</callout-text>
+					</callout>
+					<callout>
+						<title>41</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>42</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>43</title>
+						<callout-text>AI2_2 - Active Aero Hydraulic Oil Temp Sens</callout-text>
+					</callout>
+					<callout>
+						<title>44</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>45</title>
+						<callout-text>CAN A - Power Train/Chassis CAN</callout-text>
+					</callout>
+					<callout>
+						<title>46</title>
+						<callout-text>AI8-1</callout-text>
+					</callout>
+					<callout>
+						<title>47</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>48</title>
+						<callout-text>AI6_X - Reserve - Active Aero Spare Sensor</callout-text>
+					</callout>
+					<callout>
+						<title>49</title>
+						<callout-text>AI4_X - Aero Pos Sens Pitch 2</callout-text>
+					</callout>
+					<callout>
+						<title>50</title>
+						<callout-text>AI6_X - Active Sensor Hydraulic Oil Pressure Sensor</callout-text>
+					</callout>
+					<callout>
+						<title>51</title>
+						<callout-text>AI4_X - Aero Pos Sens Pitch 1 (RHS)</callout-text>
+					</callout>
+					<callout>
+						<title>52</title>
+						<callout-text>AI1-3</callout-text>
+					</callout>
+					<callout>
+						<title>53</title>
+						<callout-text>Aero Position Sensor Lift</callout-text>
+					</callout>
+					<callout>
+						<title>54</title>
+						<callout-text>AI9_7 - Aero Position Sensor Lift 1 (RHS)</callout-text>
+					</callout>
+					<callout>
+						<title>55</title>
+						<callout-text>Sensor Supply</callout-text>
+					</callout>
+					<callout>
+						<title>56</title>
+						<callout-text>KL 15</callout-text>
+					</callout>
+					<callout>
+						<title>57</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>58</title>
+						<callout-text>CAN A + Power Train/Chassis CAN</callout-text>
+					</callout>
+				</custom-legend>
+			</legend>
+		</figure>
+	</pin>
+	<location>
+		<figure>
+			<title>LOCATION</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G012854-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+		</figure>
+	</location>
+</unit>

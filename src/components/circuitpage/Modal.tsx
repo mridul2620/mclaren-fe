@@ -2,18 +2,29 @@
 import React from 'react';
 import './Modal.css'; // Add styles for the modal
 
+// Import the Connector interface or redefine it here
+interface Connector {
+  _id: string;
+  connectorName: string;
+  description?: string;
+  connectorDescription?: string;
+  location?: string;
+  connectorID?: string;
+  connectorPartNumber: string;
+  supplierPartNumber?: string;
+  supplier?: string;
+  color?: string;
+  numberOfPins?: number;
+  powerSupply?: string;
+  imageUrl?: string;
+  fitPart?: any[];
+  legend?: any[];
+}
+
 interface ModalProps {
   show: boolean;
   onClose: () => void;
-  connector: {
-    connectorName: string;
-    description: string;
-    partNumber: string;
-    color: string;
-    numberOfPins: number;
-  location: string
-    imageUrl: string;
-  } | null;
+  connector: Connector | null;
 }
 
 const Modal: React.FC<ModalProps> = ({ show, onClose, connector }) => {
@@ -29,11 +40,13 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, connector }) => {
         <div className="connector-image">
           <img src={'/graphics.jpg'} alt={connector.connectorName} />
         </div>
-        <p><strong>Description:</strong> {connector.description}</p>
-        <p><strong>Location:</strong> {connector.location}</p>
-        <p><strong>Part Number:</strong> {connector.partNumber}</p>
-        <p><strong>Color:</strong> {connector.color}</p>
-        <p><strong>Number of Pins:</strong> {connector.numberOfPins}</p>
+        <p><strong>Description:</strong> {connector.connectorDescription || connector.description || 'N/A'}</p>
+        <p><strong>Location:</strong> {connector.location || 'N/A'}</p>
+        <p><strong>Part Number:</strong> {connector.connectorPartNumber || 'N/A'}</p>
+        <p><strong>Supplier:</strong> {connector.supplier || 'N/A'}</p>
+        <p><strong>Supplier Part Number:</strong> {connector.supplierPartNumber || 'N/A'}</p>
+        <p><strong>Color:</strong> {connector.color || 'N/A'}</p>
+        <p><strong>Number of Pins:</strong> {connector.numberOfPins || 'N/A'}</p>
       </div>
     </div>
   );

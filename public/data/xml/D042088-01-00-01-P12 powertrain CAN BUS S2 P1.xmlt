@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ie docno="D042088" lang="en-GB" valid-for="6" ieid="42088" versionid="42259" doctypeid="35" languageid="01" status="3" kty.version="1.0" kty.title="BA-WD-07M002 - Powertrain CAN Bus (S2) - P1 " kty.subtitle="" kty.doctype="map-wiring" kty.status="Approved" kty.lang="en-GB" kty.externalno="DST003004" kty.ietype="1" kty.ver="01" kty.rev="00" kty.validfrom="2000-01-01" kty.lastmodified="2024-06-12" kty.approveddate="2024-06-12" kty.today="2025-02-20 00:00" kty.assignedto="" kty.islatest="1">
+  <meta />
+  <relations />
+  <meta-folders>
+    <meta-folder id="2" folderlevel="2" description="Wiring schematics" typeid="1" externalno="10:01" />
+    <meta-folder id="743" folderlevel="3" description="Fuel Delivery Systems" typeid="3" externalno="530" />
+    <meta-folder id="745" folderlevel="3" description="Emission control systems" typeid="3" externalno="532" />
+    <meta-folder id="746" folderlevel="3" description="Fuel Injectors and Fuel Rails" typeid="3" externalno="533" />
+    <meta-folder id="747" folderlevel="3" description="Fuel System Other" typeid="3" externalno="534" />
+    <meta-folder id="765" folderlevel="3" description="Ignition Control Systems" typeid="3" externalno="562" />
+    <meta-folder id="766" folderlevel="3" description="Fuel Control Systems" typeid="3" externalno="563" />
+    <meta-folder id="783" folderlevel="3" description="Body Wiring Harnesses" typeid="3" externalno="714" />
+    <meta-folder id="784" folderlevel="3" description="Non-Body Wiring Harnesses" typeid="3" externalno="715" />
+    <meta-folder id="807" folderlevel="3" description="Vehicle Control Systems" typeid="3" externalno="754" />
+  </meta-folders>
+  <configs>
+    <config confid="6" descr="P12C" fl="1" />
+  </configs>
+  <map-wiring>
+    <!--Created from D-ST-0003004:2:3 -->
+    <title>BA-WD-07M002 - Powertrain CAN Bus (S2) - P1
+</title>
+    <hotspotimage>
+      <figure>
+        <graphic file="\\corp.aleido.se\root\Kentucky\Kentucky_MAL3\Data\0\1\9\0\1\G019019-01-00-01.hires.jpg" kty.ieid="19019" kty.title="BA-WD-07M002 - Powertrain CAN Bus (S2) - P1 " kty.subtitle="" kty.status="Approved" kty.statusid="3" kty.version="1.0" kty.versionid="20020" kty.doctype="Imported SIS graphic" kty.doctypeid="36" kty.ieno="G019019" kty.languageid="01" kty.lang="en-GB" kty.externalno="GWO006416" kty.ietype="2" kty.ver="01" kty.rev="00" kty.validfrom="2000-01-01" valid-for="1">
+          <configs>
+            <config confid="1" descr="[ All ]" fl="0" />
+          </configs>
+        </graphic>
+      </figure>
+      <hotspots>
+        <hotspot shape="rectangle" x="0.29277024" y="0.604336" dx="0.03125745" dy="0.02981031" annotation-ref="MB024_P12" />
+        <hotspot shape="rectangle" x="0.48413268" y="0.60501355" dx="0.03125742" dy="0.02981031" annotation-ref="MB036_P12" />
+        <hotspot shape="rectangle" x="0.65163445" y="0.60501355" dx="0.03125745" dy="0.02981031" annotation-ref="MB060_P12" />
+        <hotspot shape="rectangle" x="0.8422811" y="0.6056911" dx="0.036029577" dy="0.02981031" annotation-ref="12MB17_P12" />
+        <hotspot shape="rectangle" x="0.079694584" y="0.18631436" dx="0.039847292" dy="0.036585376" annotation-ref="MB137_P12" />
+      </hotspots>
+      <annotation annotation-id="MB137_P12">
+        <extref href="D040606-A000001" target.doc.title="MB137" target.doc.subtitle="Control Unit - Switch Control Unit Gateway - Connector MB137 - connector to OBD2 Diagnostic " target.doc.externalno="DWO000011.278" target.docno="D040606" target.ietype="1" kty.doctypeid="40" kty.doctype="Unit" kty.languageid="1" kty.languagecode="en-GB" kty.versionid="41671" target.filename="D040606-01-00-01.xml" valid-for="6" target.title="MB137" target.type="unit" target.position="1" source.docno="D042088" />
+      </annotation>
+      <annotation annotation-id="MB060_P12">
+        <extref href="D040560-A000001" target.doc.title="MB060" target.doc.subtitle="Control Unit - Electronic Parking Brake " target.doc.externalno="DWO000011.237" target.docno="D040560" target.ietype="1" kty.doctypeid="40" kty.doctype="Unit" kty.languageid="1" kty.languagecode="en-GB" kty.versionid="38059" target.filename="D040560-01-00-01.xml" valid-for="6" target.title="MB060" target.type="unit" target.position="1" source.docno="D042088" />
+      </annotation>
+      <annotation annotation-id="MB036_P12">
+        <extref href="D040546-A000001" target.doc.title="MB036 " target.doc.subtitle="Control Unit - Engine - Connector MB036 - Hybrid CAN bus - connector to OBD2 Diagnostic " target.doc.externalno="DWO000011.222" target.docno="D040546" target.ietype="1" kty.doctypeid="40" kty.doctype="Unit" kty.languageid="1" kty.languagecode="en-GB" kty.versionid="37617" target.filename="D040546-01-00-01.xml" valid-for="6" target.title="MB036 " target.type="unit" target.position="1" source.docno="D042088" />
+      </annotation>
+      <annotation annotation-id="MB024_P12">
+        <extref href="D040538-A000001" target.doc.title="MB024" target.doc.subtitle="Control Unit - Occupant Restraint Controller " target.doc.externalno="DWO000011.214" target.docno="D040538" target.ietype="1" kty.doctypeid="40" kty.doctype="Unit" kty.languageid="1" kty.languagecode="en-GB" kty.versionid="39600" target.filename="D040538-01-00-01.xml" valid-for="6" target.title="MB024" target.type="unit" target.position="1" source.docno="D042088" />
+      </annotation>
+      <annotation annotation-id="12MB17_P12">
+        <extref href="D040368-A000001" target.doc.title="12MB17 " target.doc.subtitle="TCU " target.doc.externalno="DWO000009.13" target.docno="D040368" target.ietype="1" kty.doctypeid="40" kty.doctype="Unit" kty.languageid="1" kty.languagecode="en-GB" kty.versionid="37209" target.filename="D040368-01-00-01.xml" valid-for="6" target.title="12MB17 " target.type="unit" target.position="1" source.docno="D042088" />
+      </annotation>
+    </hotspotimage>
+  </map-wiring>
+</ie>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?altova_sps https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.sps?>
+<unit id="D040560-A000001" docno="D040560" lang="en-GB" valid-for="6" d1p1:noNamespaceSchemaLocation="https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+	<!--Created from D-WO-0000011:1:15 -->
+	<title>MB060</title>
+	<subtitle>Control Unit - Electronic Parking Brake 
+</subtitle>
+	<pin>
+		<figure>
+			<title>PIN</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G009834-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+			<legend>
+				<custom-legend>
+					<callout>
+						<title>1</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>2</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>3</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>4</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>5</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>6</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>7</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>8</title>
+						<callout-text>Demand Lamp</callout-text>
+					</callout>
+					<callout>
+						<title>9</title>
+						<callout-text>DD REL NO</callout-text>
+					</callout>
+					<callout>
+						<title>10</title>
+						<callout-text>DD REL NC</callout-text>
+					</callout>
+					<callout>
+						<title>11</title>
+						<callout-text>DD Sup 2</callout-text>
+					</callout>
+					<callout>
+						<title>12</title>
+						<callout-text>Motor R +</callout-text>
+					</callout>
+					<callout>
+						<title>13</title>
+						<callout-text>B+ Motor R</callout-text>
+					</callout>
+					<callout>
+						<title>14</title>
+						<callout-text>Motor L +</callout-text>
+					</callout>
+					<callout>
+						<title>15</title>
+						<callout-text>B+ Motor L</callout-text>
+					</callout>
+					<callout>
+						<title>16</title>
+						<callout-text>Chasis/Powertrain CAN H</callout-text>
+					</callout>
+					<callout>
+						<title>17</title>
+						<callout-text>Chasis/Powertrain CAN H</callout-text>
+					</callout>
+					<callout>
+						<title>18</title>
+						<callout-text>DD APP NO</callout-text>
+					</callout>
+					<callout>
+						<title>19</title>
+						<callout-text>DD APP NC</callout-text>
+					</callout>
+					<callout>
+						<title>20</title>
+						<callout-text>DD Sup 1</callout-text>
+					</callout>
+					<callout>
+						<title>21</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>22</title>
+						<callout-text>KL 15</callout-text>
+					</callout>
+					<callout>
+						<title>23</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>24</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>25</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>26</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>27</title>
+						<callout-text>Motor R -</callout-text>
+					</callout>
+					<callout>
+						<title>28</title>
+						<callout-text>GND Motor R</callout-text>
+					</callout>
+					<callout>
+						<title>29</title>
+						<callout-text>Motor L -</callout-text>
+					</callout>
+					<callout>
+						<title>30</title>
+						<callout-text>GND Motor L</callout-text>
+					</callout>
+				</custom-legend>
+			</legend>
+		</figure>
+	</pin>
+	<location>
+		<figure>
+			<title>LOCATION</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G013060-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+		</figure>
+	</location>
+</unit>

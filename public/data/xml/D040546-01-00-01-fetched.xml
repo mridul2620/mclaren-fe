@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?altova_sps https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.sps?>
+<unit id="D040546-A000001" docno="D040546" lang="en-GB" valid-for="6" d1p1:noNamespaceSchemaLocation="https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+	<!--Created from D-WO-0000011:1:15 -->
+	<title>MB036
+</title>
+	<subtitle>Control Unit - Engine - Connector MB036 - Hybrid CAN bus - connector to OBD2 Diagnostic
+</subtitle>
+	<pin>
+		<figure>
+			<title>PIN</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G009824-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+			<legend>
+				<custom-legend>
+					<callout>
+						<title>1</title>
+						<callout-text>Main GND 2</callout-text>
+					</callout>
+					<callout>
+						<title>2</title>
+						<callout-text>Main GND 1</callout-text>
+					</callout>
+					<callout>
+						<title>3</title>
+						<callout-text>Batt2 + Via Main RLY</callout-text>
+					</callout>
+					<callout>
+						<title>4</title>
+						<callout-text>Main GND 3</callout-text>
+					</callout>
+					<callout>
+						<title>5</title>
+						<callout-text>Batt 3 + Via Main RLY</callout-text>
+					</callout>
+					<callout>
+						<title>6</title>
+						<callout-text>Batt 2 + Via Main RLY</callout-text>
+					</callout>
+					<callout>
+						<title>7</title>
+						<callout-text>Uhego Pump Current</callout-text>
+					</callout>
+					<callout>
+						<title>8</title>
+						<callout-text>Uhego Virtual GND</callout-text>
+					</callout>
+					<callout>
+						<title>9</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>10</title>
+						<callout-text>Uhego Sensor Nernst</callout-text>
+					</callout>
+					<callout>
+						<title>11</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>12</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>13</title>
+						<callout-text>Fuel Rail Temp Signal</callout-text>
+					</callout>
+					<callout>
+						<title>14</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>15</title>
+						<callout-text>MAF RH GND</callout-text>
+					</callout>
+					<callout>
+						<title>16</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>17</title>
+						<callout-text>Interlock SW</callout-text>
+					</callout>
+					<callout>
+						<title>18</title>
+						<callout-text>MAF RH Mass</callout-text>
+					</callout>
+					<callout>
+						<title>19</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>20</title>
+						<callout-text>Cooling Fan Relay Out 2 (High Speed)</callout-text>
+					</callout>
+					<callout>
+						<title>21</title>
+						<callout-text>Pump</callout-text>
+					</callout>
+					<callout>
+						<title>22</title>
+						<callout-text>Uhego Heater</callout-text>
+					</callout>
+					<callout>
+						<title>23</title>
+						<callout-text>Dump Valve CTRL R</callout-text>
+					</callout>
+					<callout>
+						<title>24</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>25</title>
+						<callout-text>Uhego Virtual GND</callout-text>
+					</callout>
+					<callout>
+						<title>26</title>
+						<callout-text>Uhego Sensor Nernst</callout-text>
+					</callout>
+					<callout>
+						<title>27</title>
+						<callout-text>Uhego Pump Current</callout-text>
+					</callout>
+					<callout>
+						<title>28</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>29</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>30</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>31</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>32</title>
+						<callout-text>MAF LH GND</callout-text>
+					</callout>
+					<callout>
+						<title>33</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>34</title>
+						<callout-text>MAF LH Ref Signal</callout-text>
+					</callout>
+					<callout>
+						<title>35</title>
+						<callout-text>MAF RH Ref Signal</callout-text>
+					</callout>
+					<callout>
+						<title>36</title>
+						<callout-text>Heater</callout-text>
+					</callout>
+					<callout>
+						<title>37</title>
+						<callout-text>Electric Fuel Pump (PWM CTRL)</callout-text>
+					</callout>
+					<callout>
+						<title>38</title>
+						<callout-text>SND Air Valve (L Bank)</callout-text>
+					</callout>
+					<callout>
+						<title>39</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>40</title>
+						<callout-text>Purge Valve CTRL</callout-text>
+					</callout>
+					<callout>
+						<title>41</title>
+						<callout-text>Hego Signal</callout-text>
+					</callout>
+					<callout>
+						<title>42</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>43</title>
+						<callout-text>Hego Sensor GND</callout-text>
+					</callout>
+					<callout>
+						<title>44</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>45</title>
+						<callout-text>Fuel Rail Press Signal</callout-text>
+					</callout>
+					<callout>
+						<title>46</title>
+						<callout-text>Sensor GND</callout-text>
+					</callout>
+					<callout>
+						<title>47</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>48</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>49</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>50</title>
+						<callout-text>Ignition Input</callout-text>
+					</callout>
+					<callout>
+						<title>51</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>52</title>
+						<callout-text>MAF LH Mass</callout-text>
+					</callout>
+					<callout>
+						<title>53</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>54</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>55</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>56</title>
+						<callout-text>SND Air Valve (R Bank)</callout-text>
+					</callout>
+					<callout>
+						<title>57</title>
+						<callout-text>Dump Valve CTRL L</callout-text>
+					</callout>
+					<callout>
+						<title>58</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>59</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>60</title>
+						<callout-text>CCP +</callout-text>
+					</callout>
+					<callout>
+						<title>61</title>
+						<callout-text>CCP -</callout-text>
+					</callout>
+					<callout>
+						<title>62</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>63</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>64</title>
+						<callout-text>APP 2 GND</callout-text>
+					</callout>
+					<callout>
+						<title>65</title>
+						<callout-text>APP 2 Signal</callout-text>
+					</callout>
+					<callout>
+						<title>66</title>
+						<callout-text>APP 2 Supply 5V</callout-text>
+					</callout>
+					<callout>
+						<title>67</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>68</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>69</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>70</title>
+						<callout-text>Cooling Fan Relay Out 1 (Low Speed)</callout-text>
+					</callout>
+					<callout>
+						<title>71</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>72</title>
+						<callout-text>Switch Valve</callout-text>
+					</callout>
+					<callout>
+						<title>73</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>74</title>
+						<callout-text>Hego Heater GND</callout-text>
+					</callout>
+					<callout>
+						<title>75</title>
+						<callout-text>Hego Signal</callout-text>
+					</callout>
+					<callout>
+						<title>76</title>
+						<callout-text>Hego Sensor GND</callout-text>
+					</callout>
+					<callout>
+						<title>77</title>
+						<callout-text>Hybrid CAN H</callout-text>
+					</callout>
+					<callout>
+						<title>78</title>
+						<callout-text>Hybrid CAN L</callout-text>
+					</callout>
+					<callout>
+						<title>79</title>
+						<callout-text>Powertrain CAN 1 H</callout-text>
+					</callout>
+					<callout>
+						<title>80</title>
+						<callout-text>Powertrain CAN 1 L</callout-text>
+					</callout>
+					<callout>
+						<title>81</title>
+						<callout-text>APP 1 GND</callout-text>
+					</callout>
+					<callout>
+						<title>82</title>
+						<callout-text>APP 1 Signal</callout-text>
+					</callout>
+					<callout>
+						<title>83</title>
+						<callout-text>APP 1 Supply 5V</callout-text>
+					</callout>
+					<callout>
+						<title>84</title>
+						<callout-text>Electric Fuel Pump (PWM CTRL)</callout-text>
+					</callout>
+					<callout>
+						<title>85</title>
+						<callout-text>Sensor + 5V</callout-text>
+					</callout>
+					<callout>
+						<title>86</title>
+						<callout-text>Permanent Battery</callout-text>
+					</callout>
+					<callout>
+						<title>87</title>
+						<callout-text>Main RLY CTRL</callout-text>
+					</callout>
+					<callout>
+						<title>88</title>
+						<callout-text>SND Air Pump Relay</callout-text>
+					</callout>
+					<callout>
+						<title>89</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>90</title>
+						<callout-text>Hego Heater GND</callout-text>
+					</callout>
+					<callout>
+						<title>91</title>
+						<callout-text>Hego Heater</callout-text>
+					</callout>
+				</custom-legend>
+			</legend>
+		</figure>
+	</pin>
+	<location>
+		<figure>
+			<title>LOCATION</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G013046-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+		</figure>
+	</location>
+</unit>

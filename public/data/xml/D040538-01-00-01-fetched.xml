@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?altova_sps https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.sps?>
+<unit id="D040538-A000001" docno="D040538" lang="en-GB" valid-for="6" d1p1:noNamespaceSchemaLocation="https://kentucky.aleidogroup.com/Kentucky_MAL3/DTDs/impl.xsd" xmlns:d1p1="http://www.w3.org/2001/XMLSchema-instance">
+	<!--Created from D-WO-0000011:1:15 -->
+	<title>MB024</title>
+	<subtitle>Control Unit - Occupant Restraint Controller
+</subtitle>
+	<pin>
+		<figure>
+			<title>PIN</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G009816-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+			<legend>
+				<custom-legend>
+					<callout>
+						<title>1</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>2</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>3</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>4</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>5</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>6</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>7</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>8</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>9</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>10</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>11</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>12</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>13</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>14</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>15</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>16</title>
+						<callout-text>Belt Reel Pretens DR +</callout-text>
+					</callout>
+					<callout>
+						<title>17</title>
+						<callout-text>Belt Reel Pretens DR -</callout-text>
+					</callout>
+					<callout>
+						<title>18</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>19</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>20</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>21</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>22</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>23</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>24</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>25</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>26</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>27</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>28</title>
+						<callout-text>Buckle SW Driver</callout-text>
+					</callout>
+					<callout>
+						<title>29</title>
+						<callout-text>-</callout-text>
+						<!--Migration comment: empty callout text replaced by '-'-->
+					</callout>
+					<callout>
+						<title>30</title>
+						<callout-text>Buckle SW Passenger</callout-text>
+					</callout>
+					<callout>
+						<title>31</title>
+						<callout-text>Door Curtain (Head) Airbag Pass -</callout-text>
+					</callout>
+					<callout>
+						<title>32</title>
+						<callout-text>Door Curtain (Head) Airbag Pass +</callout-text>
+					</callout>
+					<callout>
+						<title>33</title>
+						<callout-text>Door Curtain (Head) Airbag DR +</callout-text>
+					</callout>
+					<callout>
+						<title>34</title>
+						<callout-text>Door Curtain (Head) Airbag DR -</callout-text>
+					</callout>
+					<callout>
+						<title>35</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>36</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>37</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>38</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>39</title>
+						<callout-text>Belt Reel Pretens Pass -</callout-text>
+					</callout>
+					<callout>
+						<title>40</title>
+						<callout-text>Belt Reel Pretens Pass +</callout-text>
+					</callout>
+					<callout>
+						<title>41</title>
+						<callout-text>Front Airbag DR Stage 2 +</callout-text>
+					</callout>
+					<callout>
+						<title>42</title>
+						<callout-text>Front Airbag DR Stage 2 -</callout-text>
+					</callout>
+					<callout>
+						<title>43</title>
+						<callout-text>Knee Airbag Driver -</callout-text>
+					</callout>
+					<callout>
+						<title>44</title>
+						<callout-text>Knee Airbag Driver +</callout-text>
+					</callout>
+					<callout>
+						<title>45</title>
+						<callout-text>Knee Airbag Passenger +</callout-text>
+					</callout>
+					<callout>
+						<title>46</title>
+						<callout-text>Knee Airbag Passenger -</callout-text>
+					</callout>
+					<callout>
+						<title>47</title>
+						<callout-text>Front Airbag Pass Stage 2 -</callout-text>
+					</callout>
+					<callout>
+						<title>48</title>
+						<callout-text>Front Airbag Pass Stage 2 +</callout-text>
+					</callout>
+					<callout>
+						<title>49</title>
+						<callout-text>Front Airbag Pass Stage 1 +</callout-text>
+					</callout>
+					<callout>
+						<title>50</title>
+						<callout-text>Front Airbag Pass Stage 1 -</callout-text>
+					</callout>
+					<callout>
+						<title>51</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>52</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>53</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>54</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>55</title>
+						<callout-text>Power Supply</callout-text>
+					</callout>
+					<callout>
+						<title>56</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>57</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>58</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>59</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>60</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>61</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>62</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>63</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>64</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>65</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>66</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>67</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>68</title>
+						<callout-text>Front Airbag DR Stage 1 -</callout-text>
+					</callout>
+					<callout>
+						<title>69</title>
+						<callout-text>Front Airbag DR Stage 1 +</callout-text>
+					</callout>
+					<callout>
+						<title>70</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>71</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>72</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>73</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>74</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>75</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>76</title>
+						<callout-text>PWR Supply Out OCS</callout-text>
+					</callout>
+					<callout>
+						<title>77</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>78</title>
+						<callout-text>Ground Out OCS</callout-text>
+					</callout>
+					<callout>
+						<title>79</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>80</title>
+						<callout-text>OCS Interface LIN</callout-text>
+					</callout>
+					<callout>
+						<title>81</title>
+						<callout-text>AOL - Airbag Off Lamp</callout-text>
+					</callout>
+					<callout>
+						<title>82</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>83</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>84</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>85</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>86</title>
+						<callout-text>Side Accel SS DR -</callout-text>
+					</callout>
+					<callout>
+						<title>87</title>
+						<callout-text>Side Accel SS DR +</callout-text>
+					</callout>
+					<callout>
+						<title>88</title>
+						<callout-text>Side Accel SS Pass -</callout-text>
+					</callout>
+					<callout>
+						<title>89</title>
+						<callout-text>Side Accel SS Pass +</callout-text>
+					</callout>
+					<callout>
+						<title>90</title>
+						<callout-text>Side Door Press SS Pass -</callout-text>
+					</callout>
+					<callout>
+						<title>91</title>
+						<callout-text>Side Door Press SS Pass +</callout-text>
+					</callout>
+					<callout>
+						<title>92</title>
+						<callout-text>Side Door Press SS DR -</callout-text>
+					</callout>
+					<callout>
+						<title>93</title>
+						<callout-text>Side Door Press SS DR +</callout-text>
+					</callout>
+					<callout>
+						<title>94</title>
+						<callout-text>Upfront Accel SS DR -</callout-text>
+					</callout>
+					<callout>
+						<title>95</title>
+						<callout-text>Upfront Accel SS DR +</callout-text>
+					</callout>
+					<callout>
+						<title>96</title>
+						<callout-text>Upfront Accel SS Pass -</callout-text>
+					</callout>
+					<callout>
+						<title>97</title>
+						<callout-text>Upfront Accel SS Pass +</callout-text>
+					</callout>
+					<callout>
+						<title>98</title>
+						<callout-text>-</callout-text>
+					</callout>
+					<callout>
+						<title>99</title>
+						<callout-text>Powertrain CAN H</callout-text>
+					</callout>
+					<callout>
+						<title>100</title>
+						<callout-text>Powertrain CAN L</callout-text>
+					</callout>
+				</custom-legend>
+			</legend>
+		</figure>
+	</pin>
+	<location>
+		<figure>
+			<title>LOCATION</title>
+			<graphic file="https://kentucky.aleidogroup.com/Kentucky_MAL3//Image.aspx?uri=G013038-01-00-01.lores.jpg&amp;token=658ef9f9-d40d-482e-88cf-0d925e3e8869"/>
+		</figure>
+	</location>
+</unit>
