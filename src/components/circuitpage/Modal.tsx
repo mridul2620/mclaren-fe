@@ -19,6 +19,7 @@ interface Connector {
   imageUrl?: string;
   fitPart?: any[];
   legend?: any[];
+  partNumber?: string
 }
 
 interface ModalProps {
@@ -42,7 +43,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, connector }) => {
         </div>
         <p><strong>Description:</strong> {connector.connectorDescription || connector.description || 'N/A'}</p>
         <p><strong>Location:</strong> {connector.location || 'N/A'}</p>
-        <p><strong>Part Number:</strong> {connector.connectorPartNumber || 'N/A'}</p>
+        <p><strong>Part Number:</strong> {connector.partNumber || 'N/A'}</p>
         <p><strong>Supplier:</strong> {connector.supplier || 'N/A'}</p>
         <p><strong>Supplier Part Number:</strong> {connector.supplierPartNumber || 'N/A'}</p>
         <p><strong>Color:</strong> {connector.color || 'N/A'}</p>

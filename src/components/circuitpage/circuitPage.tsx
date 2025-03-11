@@ -7,6 +7,7 @@ import Circuit2 from './circuit2';
 
 import Modal from './Modal';
 import CircuitViewer from '../DTC/circuitViewer';
+import FeedbackBox from './FeedbackBox';
 
 export interface FitPart {
   _id: string;
@@ -166,8 +167,11 @@ const CircuitPageContent: React.FC = () => {
   );
 
   // Sort connectors by connectorName in ascending order
-  const sortedConnectors = [...filteredConnectors].sort((a, b) => 
-    a.connectorPartNumber.localeCompare(b.connectorPartNumber) || a.connectorName.localeCompare(b.connectorName)
+  const sortedConnectors = [...filteredConnectors]
+  .filter(connector => connector.connectorPartNumber.startsWith('M')) // Only keep connectors starting with 'M'
+  .sort((a, b) => 
+    a.connectorPartNumber.localeCompare(b.connectorPartNumber) || 
+    a.connectorName.localeCompare(b.connectorName)
   );
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -309,7 +313,9 @@ const CircuitPageContent: React.FC = () => {
                 <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
                 <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
               </div>
-            </div>
+              <FeedbackBox schematicName="door-circuit-module-1" /> {/* Add Feedback Box */}
+              </div>
+            
           )}
           
           {/* Door Module 2 Schematic */}
@@ -326,7 +332,8 @@ const CircuitPageContent: React.FC = () => {
                 <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
                 <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
               </div>
-            </div>
+              <FeedbackBox schematicName="door-circuit-module-2" /> {/* Add Feedback Box */}
+              </div>
           )}
           
           {/* Powertrain CAN Bus Schematic */}
@@ -341,7 +348,8 @@ const CircuitPageContent: React.FC = () => {
                 <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
                 <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
               </div>
-            </div>
+              <FeedbackBox schematicName="powertrain-can-bus" /> {/* Add Feedback Box */}
+              </div>
           )}
           
           <Modal 
