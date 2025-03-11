@@ -355,12 +355,12 @@ const CircuitPageContent: React.FC = () => {
             <div className="connector-details">
               <h3>{selectedConnector.connectorPartNumber} : {selectedConnector.connectorName}</h3>
               
-              <div className="connector-image">
+              {/* <div className="connector-image">
                 <img
                   src="/graphics.jpg"
                   alt={selectedConnector.connectorName}
                 />
-              </div>
+              </div> */}
               
               <div className="connector-info">
                 <div className="info-row">

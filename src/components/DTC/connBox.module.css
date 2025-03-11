@@ -154,6 +154,47 @@
   cursor: zoom-out;
 }
 
+.connectorInfo {
+  background-color: #fff; /* Change from #f8fafc to white */
+  border-radius: 0; /* Remove rounded corners */
+  padding: 20px 10px; /* Remove horizontal padding, keep vertical */
+  margin-bottom: 30px;
+  margin-left: 30px;
+  border-left: none; /* Remove the blue border */
+  box-shadow: none; /* Remove shadow */
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  align-items: flex-start;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  flex: 0 0 200px;
+  font-weight: 500;
+  color: #4b5563;
+  padding-right: 15px;
+}
+
+.info-value {
+  flex: 1;
+  color: #1f2937;
+  word-wrap: break-word;
+  font-weight: 400;
+  background-color: #ffffff;
+  padding: 5px 0; /* Remove horizontal padding */
+  border-radius: 0; /* Remove rounded corners */
+  border: none; /* Remove border */
+}
+
 .modalTabs {
   display: flex;
   border-bottom: 1px solid #eaeaea;
