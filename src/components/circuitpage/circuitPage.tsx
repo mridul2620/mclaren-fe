@@ -1,14 +1,18 @@
+// src/components/circuitPage/circuitPage.tsx
 import React, { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import axios from 'axios';
 import './circuitPage.css';
-import { useSearchParams } from 'next/navigation';
-import Circuit1 from './circuit1'; 
-import Circuit2 from './circuit2'; 
 
-import Modal from './Modal';
-import CircuitViewer from '../DTC/circuitViewer';
-import FeedbackBox from './FeedbackBox';
+// Dynamically import components with SSR disabled for circuit diagrams
+const Circuit1 = dynamic(() => import('./circuit1'), { ssr: false });
+const Circuit2 = dynamic(() => import('./circuit2'), { ssr: false });
+const CircuitViewer = dynamic(() => import('../DTC/circuitViewer'), { ssr: false });
+const Modal = dynamic(() => import('./Modal'), { ssr: false });
+const FeedbackBox = dynamic(() => import('./FeedbackBox'), { ssr: false });
 
+// Interface definitions remain the same
 export interface FitPart {
   _id: string;
   compName: string;
@@ -60,16 +64,33 @@ export interface Connector {
 }
 
 const CircuitPageContent: React.FC = () => {
+  // State hooks
   const [activeTab, setActiveTab] = useState('schematics');
   const [connectors, setConnectors] = useState<Connector[]>([]);
   const [selectedConnector, setSelectedConnector] = useState<Connector | null>(null);
-  const [selectedSchematic, setSelectedSchematic] = useState<string | null>(null);
+  const [selectedSchematic, setSelectedSchematic] = useState<string | null>('door-circuit-module-1');
   const [searchTerm, setSearchTerm] = useState('');
   const [zoomLevel, setZoomLevel] = useState(100);
   const [showModal, setShowModal] = useState(false);
   const [highlightedText, setHighlightedText] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [cssLoaded, setCssLoaded] = useState(false);
 
+  // Get search params
+  const searchParams = useSearchParams();
+  const brand = searchParams.get('brand');
+  const model = searchParams.get('model');
+  const year = searchParams.get('year');
+
+  // Ensure CSS is loaded
+  useEffect(() => {
+    // Force CSS to be processed fully
+    const styleLoadCheck = setTimeout(() => {
+      setCssLoaded(true);
+    }, 100);
+    
+    return () => clearTimeout(styleLoadCheck);
+  }, []);
 
   const formatConnectorData = (connector: Connector): Connector => {
     // Replace underscores with spaces in string fields
@@ -128,31 +149,38 @@ const CircuitPageContent: React.FC = () => {
     return formattedConnector;
   };
 
+  // Fetch connectors using Axios with error handling
   useEffect(() => {
+    let isMounted = true;
     setLoading(true);
+    
     axios.get('https://publication-portal-be.onrender.com/api/ml/connectors')
       .then(response => {
-        const formattedConnectors = response.data.connectors.map(formatConnectorData);
-        setConnectors(formattedConnectors);
-        if (formattedConnectors.length > 0) {
-          setSelectedConnector(formattedConnectors[0]);
+        if (isMounted) {
+          const formattedConnectors = response.data.connectors.map(formatConnectorData);
+          setConnectors(formattedConnectors);
+          if (formattedConnectors.length > 0) {
+            setSelectedConnector(formattedConnectors[0]);
+          }
+          setLoading(false);
         }
-        setLoading(false);
       })
       .catch(error => {
         console.error('Error fetching connectors', error);
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       });
+      
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
+  // Reset zoom level when changing schematics
   useEffect(() => {
-    setZoomLevel(100); // Reset zoom level to default (100%)
+    setZoomLevel(100);
   }, [selectedSchematic]);
-
-  const searchParams = useSearchParams();
-  const brand = searchParams.get('brand');
-  const model = searchParams.get('model');
-  const year = searchParams.get('year');
 
   const handleZoom = (direction: 'in' | 'out') => {
     setZoomLevel(prevZoom => {
@@ -161,62 +189,75 @@ const CircuitPageContent: React.FC = () => {
     });
   };
 
+  // Filter and sort connectors
   const filteredConnectors = connectors.filter(connector =>
     connector.connectorPartNumber.toLowerCase().includes(searchTerm.toLowerCase()) || 
     connector.connectorName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Sort connectors by connectorName in ascending order
   const sortedConnectors = [...filteredConnectors]
-  .filter(connector => connector.connectorPartNumber.startsWith('M')) // Only keep connectors starting with 'M'
-  .sort((a, b) => 
-    a.connectorPartNumber.localeCompare(b.connectorPartNumber) || 
-    a.connectorName.localeCompare(b.connectorName)
-  );
+    .filter(connector => connector.connectorPartNumber.startsWith('M'))
+    .sort((a, b) => 
+      a.connectorPartNumber.localeCompare(b.connectorPartNumber) || 
+      a.connectorName.localeCompare(b.connectorName)
+    );
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
-
     if (e.target.value.trim() !== '') {
       setActiveTab('connectors');
-      setSelectedSchematic(null);  // Hide schematic when searching for connectors
+      setSelectedSchematic(null);
     }
   };
 
   const handleTabSwitch = (tab: string) => {
     setActiveTab(tab);
     if (tab === 'schematics') {
-      setSelectedSchematic('door-circuit-module-1'); // Reset schematic when switching tabs
+      setSelectedSchematic('door-circuit-module-1');
     } else if (tab === 'connectors' && sortedConnectors.length > 0) {
       setSelectedConnector(sortedConnectors[0]);
     }
-    setHighlightedText(null);  // Reset connector when switching tabs
+    setHighlightedText(null);
   };
 
   const handleConnectorClick = (connector: Connector) => {
-    // Show the modal with the clicked connector's details
     setSelectedConnector(connector);
-    setShowModal(true); // Show the modal
+    setShowModal(true);
   };
 
   const handleSchematicChange = (schematic: string) => {
     setSelectedSchematic(schematic);
-    setHighlightedText(null); // Reset the highlighted text when changing schematics
+    setHighlightedText(null);
   };
 
   const handleTextClick = (textValue: string) => {
-    setHighlightedText(textValue);  // Set the text to be highlighted in Svg2
-    setSelectedSchematic('door-circuit-module-2'); // Switch to Svg2
+    setHighlightedText(textValue);
+    setSelectedSchematic('door-circuit-module-2');
   };
 
   const closeModal = () => {
-    setShowModal(false); // Close the modal
+    setShowModal(false);
   };
 
   const handleConnectorSelect = (connector: Connector) => {
     setSelectedConnector(formatConnectorData(connector));
     setActiveTab('connectors');
   };
+
+  // If CSS not loaded, show a minimal loading state
+  if (!cssLoaded) {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh',
+        fontSize: '18px'
+      }}>
+        Loading circuit page...
+      </div>
+    );
+  }
 
   return (
     <div className="circuit-page-container">
@@ -313,9 +354,8 @@ const CircuitPageContent: React.FC = () => {
                 <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
                 <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
               </div>
-              <FeedbackBox schematicName="door-circuit-module-1" /> {/* Add Feedback Box */}
-              </div>
-            
+              <FeedbackBox schematicName="door-circuit-module-1" />
+            </div>
           )}
           
           {/* Door Module 2 Schematic */}
@@ -332,8 +372,8 @@ const CircuitPageContent: React.FC = () => {
                 <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
                 <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
               </div>
-              <FeedbackBox schematicName="door-circuit-module-2" /> {/* Add Feedback Box */}
-              </div>
+              <FeedbackBox schematicName="door-circuit-module-2" />
+            </div>
           )}
           
           {/* Powertrain CAN Bus Schematic */}
@@ -348,8 +388,8 @@ const CircuitPageContent: React.FC = () => {
                 <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
                 <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
               </div>
-              <FeedbackBox schematicName="powertrain-can-bus" /> {/* Add Feedback Box */}
-              </div>
+              <FeedbackBox schematicName="powertrain-can-bus" />
+            </div>
           )}
           
           <Modal 
@@ -362,13 +402,6 @@ const CircuitPageContent: React.FC = () => {
           {selectedConnector && activeTab === 'connectors' && (
             <div className="connector-details">
               <h3>{selectedConnector.connectorPartNumber} : {selectedConnector.connectorName}</h3>
-              
-              {/* <div className="connector-image">
-                <img
-                  src="/graphics.jpg"
-                  alt={selectedConnector.connectorName}
-                />
-              </div> */}
               
               <div className="connector-info">
                 <div className="info-row">
@@ -422,7 +455,7 @@ const CircuitPageContent: React.FC = () => {
                       </tr>
                     </thead>
                     <tbody>
-                    <tr>
+                      <tr>
                         <td colSpan={2} className="no-data">No fit parts available</td>
                       </tr>
                     </tbody>
@@ -519,10 +552,21 @@ const CircuitPageContent: React.FC = () => {
   );
 };
 
-const SuspendedCircuitPageContent = () => (
-  <Suspense fallback={<div>Loading...</div>}>
-    <CircuitPageContent />
-  </Suspense>
-);
-
-export default SuspendedCircuitPageContent;
+// Export a improved version with proper loading handling
+export default function CircuitPage() {
+  return (
+    <Suspense fallback={
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh',
+        fontSize: '18px'
+      }}>
+        Loading circuit page...
+      </div>
+    }>
+      <CircuitPageContent />
+    </Suspense>
+  );
+}

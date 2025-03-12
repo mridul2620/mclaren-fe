@@ -10,4 +10,25 @@
 
 :root{
     font-family: Arial, Helvetica, sans-serif;
+    --force-css-priority: 999 !important;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Add transition for navigation effects */
+  .page-transition {
+    transition: opacity 0.2s ease-in-out;
+  }
