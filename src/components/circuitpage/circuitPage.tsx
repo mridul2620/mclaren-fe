@@ -130,7 +130,7 @@ const CircuitPageContent: React.FC = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get('http://localhost:3001/api/ml/connectors')
+    axios.get('https://publication-portal-be.onrender.com/api/ml/connectors')
       .then(response => {
         const formattedConnectors = response.data.connectors.map(formatConnectorData);
         setConnectors(formattedConnectors);
