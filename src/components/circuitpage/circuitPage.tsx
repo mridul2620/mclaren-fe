@@ -216,6 +216,9 @@ const CircuitPageContent: React.FC = () => {
       setSelectedSchematic('door-circuit-module-1');
     } else if (tab === 'connectors' && sortedConnectors.length > 0) {
       setSelectedConnector(sortedConnectors[0]);
+    } else if (tab === 'dtc') {
+      // Don't automatically set a schematic when switching to DTC tab
+      setSelectedSchematic(null);
     }
     setHighlightedText(null);
   };
@@ -280,13 +283,19 @@ const CircuitPageContent: React.FC = () => {
               className={`tab-button ${activeTab === 'schematics' ? 'active' : ''}`}
               onClick={() => handleTabSwitch('schematics')}
             >
-              Circuit
+              Schematics
             </button>
             <button
               className={`tab-button ${activeTab === 'connectors' ? 'active' : ''}`}
               onClick={() => handleTabSwitch('connectors')}
             >
               Connectors
+            </button>
+            <button
+              className={`tab-button ${activeTab === 'dtc' ? 'active' : ''}`}
+              onClick={() => handleTabSwitch('dtc')}
+            >
+              DTC
             </button>
           </div>
 
@@ -305,12 +314,6 @@ const CircuitPageContent: React.FC = () => {
                     className={selectedSchematic === 'door-circuit-module-2' ? 'active' : ''}
                   >
                     Door Module - 2
-                  </li>
-                  <li 
-                    onClick={() => handleSchematicChange('powertrain-can-bus')}
-                    className={selectedSchematic === 'powertrain-can-bus' ? 'active' : ''}
-                  >
-                    Powertrain CAN Bus
                   </li>
                 </ul>
               </div>
@@ -333,6 +336,20 @@ const CircuitPageContent: React.FC = () => {
                     ))}
                   </ul>
                 )}
+              </div>
+            )}
+
+            {activeTab === 'dtc' && (
+              <div className="dtc-tab">
+                <ul>
+                  <li 
+                    onClick={() => handleSchematicChange('powertrain-can-bus')}
+                    className={selectedSchematic === 'powertrain-can-bus' ? 'active' : ''}
+                  >
+                    P0606 : Powertrain CAN Bus
+                  </li>
+                  {/* Additional DTC content can be added here */}
+                </ul>
               </div>
             )}
           </div>
@@ -376,8 +393,8 @@ const CircuitPageContent: React.FC = () => {
             </div>
           )}
           
-          {/* Powertrain CAN Bus Schematic */}
-          {selectedSchematic === 'powertrain-can-bus' && activeTab === 'schematics' && (
+          {/* Powertrain CAN Bus Schematic - Now in DTC tab */}
+          {selectedSchematic === 'powertrain-can-bus' && activeTab === 'dtc' && (
             <div className="schematic-image">
               <CircuitViewer 
                 connectors={connectors}
@@ -546,6 +563,25 @@ const CircuitPageContent: React.FC = () => {
               </div>
             </div>
           )}
+          
+          {/* DTC Tab Content - Default empty state */}
+          {activeTab === 'dtc' && !selectedSchematic && (
+            <div className="dtc-details">
+              <h3>Diagnostic Trouble Codes</h3>
+              <div className="no-data" style={{
+                padding: '30px',
+                textAlign: 'center',
+                color: '#6b7280',
+                fontStyle: 'italic',
+                backgroundColor: '#f8fafc',
+                margin: '20px 0',
+                borderRadius: '6px',
+                fontSize: '15px'
+              }}>
+                Select an option from the left panel to view DTC data
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -563,7 +599,7 @@ export default function CircuitPage() {
         height: '100vh',
         fontSize: '18px'
       }}>
-        Loading circuit page...
+        Loading schematics...
       </div>
     }>
       <CircuitPageContent />

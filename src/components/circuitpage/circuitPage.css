@@ -117,14 +117,16 @@
 }
 
 .schematics-tab,
-.connectors-tab {
+.connectors-tab, 
+.dtc-tab {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .schematics-tab li,
-.connectors-tab li {
+.connectors-tab li,
+.dtc-tab li {
     padding: 12px 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -136,12 +138,14 @@
 }
 
 .schematics-tab li:hover,
-.connectors-tab li:hover {
+.connectors-tab li:hover,
+.dtc-tab li:hover {
     background-color: #f0f4f8;
 }
 
 .schematics-tab li.active,
-.connectors-tab li.active {
+.connectors-tab li.active,
+.dtc-tab li.active {
     background-color: #e6f0ff;
     color: #007bff;
     font-weight: 500;
