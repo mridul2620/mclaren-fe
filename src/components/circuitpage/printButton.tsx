@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, ReactNode } from 'react';
 import './circuitPage.css';
 
 // Add this to your existing CSS file (circuitPage.css)
@@ -37,12 +37,13 @@ const printStyles = `
   }
 `;
 
-// Add this PrintButton component
+// Updated interface to include children prop
 interface PrintButtonProps {
   schematicName: string | null;
+  children: ReactNode;  // Add children to the props interface
 }
 
-const PrintButton: React.FC<PrintButtonProps> = ({ schematicName }) => {
+const PrintButton: React.FC<PrintButtonProps> = ({ schematicName, children }) => {
   const printContentRef = useRef<HTMLDivElement>(null);
 
   const handlePrint = () => {
@@ -129,7 +130,7 @@ const PrintButton: React.FC<PrintButtonProps> = ({ schematicName }) => {
       </button>
       {/* Wrap the content to be printed in a div with ref */}
       <div ref={printContentRef} className="print-content">
-        {/* Your component will place its children here */}
+        {children}  {/* Render the children inside the print-content div */}
       </div>
     </>
   );
