@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
 import './circuitPage.css';
-import PrintButton from './PrintButton';
+import PrintButton from './printButton.tsx';
 
 // Dynamically import components with SSR disabled for circuit diagrams
 const Circuit1 = dynamic(() => import('./circuit1'), { ssr: false });
