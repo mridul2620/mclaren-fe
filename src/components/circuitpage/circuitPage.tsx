@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
 import './circuitPage.css';
+import PrintButton from './PrintButton';
 
 // Dynamically import components with SSR disabled for circuit diagrams
 const Circuit1 = dynamic(() => import('./circuit1'), { ssr: false });
@@ -359,55 +360,61 @@ const CircuitPageContent: React.FC = () => {
         <div className="right-panel">
           {/* Door Module 1 Schematic */}
           {selectedSchematic === 'door-circuit-module-1' && activeTab === 'schematics' && (
-            <div className="schematic-image">
-              <div style={{ transform: `scale(${zoomLevel / 90})`, transformOrigin: 'top left' }}>
-                <Circuit1
-                  connectors={connectors}
-                  onConnectorClick={handleConnectorClick}
-                  onTextClick={handleTextClick}
-                />
-              </div>
-              <div className="zoom-controls">
-                <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
-                <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
-              </div>
-              <FeedbackBox schematicName="door-circuit-module-1" />
-            </div>
-          )}
+  <div className="schematic-image">
+    <PrintButton schematicName={selectedSchematic}>
+      <div style={{ transform: `scale(${zoomLevel / 90})`, transformOrigin: 'top left' }}>
+        <Circuit1
+          connectors={connectors}
+          onConnectorClick={handleConnectorClick}
+          onTextClick={handleTextClick}
+        />
+      </div>
+    </PrintButton>
+    <div className="zoom-controls">
+      <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
+      <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
+    </div>
+    <FeedbackBox schematicName="door-circuit-module-1" />
+  </div>
+)}
           
           {/* Door Module 2 Schematic */}
           {selectedSchematic === 'door-circuit-module-2' && activeTab === 'schematics' && (
-            <div className="schematic-image">
-              <div style={{ transform: `scale(${zoomLevel / 90})`, transformOrigin: 'top left' }}>
-                <Circuit2
-                  connectors={connectors}
-                  onConnectorClick={handleConnectorClick}
-                  highlightedText={highlightedText}
-                />
-              </div>
-              <div className="zoom-controls">
-                <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
-                <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
-              </div>
-              <FeedbackBox schematicName="door-circuit-module-2" />
-            </div>
-          )}
+  <div className="schematic-image">
+    <PrintButton schematicName={selectedSchematic}>
+      <div style={{ transform: `scale(${zoomLevel / 90})`, transformOrigin: 'top left' }}>
+        <Circuit2
+          connectors={connectors}
+          onConnectorClick={handleConnectorClick}
+          highlightedText={highlightedText}
+        />
+      </div>
+    </PrintButton>
+    <div className="zoom-controls">
+      <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
+      <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
+    </div>
+    <FeedbackBox schematicName="door-circuit-module-2" />
+  </div>
+)}
           
           {/* Powertrain CAN Bus Schematic - Now in DTC tab */}
           {selectedSchematic === 'powertrain-can-bus' && activeTab === 'dtc' && (
-            <div className="schematic-image">
-              <CircuitViewer 
-                connectors={connectors}
-                onConnectorClick={handleConnectorClick}
-                zoomLevel={zoomLevel}
-              />
-              <div className="zoom-controls">
-                <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
-                <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
-              </div>
-              <FeedbackBox schematicName="powertrain-can-bus" />
-            </div>
-          )}
+  <div className="schematic-image">
+    <PrintButton schematicName={selectedSchematic}>
+      <CircuitViewer 
+        connectors={connectors}
+        onConnectorClick={handleConnectorClick}
+        zoomLevel={zoomLevel}
+      />
+    </PrintButton>
+    <div className="zoom-controls">
+      <button className="zoom-button" onClick={() => handleZoom('in')}>+</button>
+      <button className="zoom-button" onClick={() => handleZoom('out')}>-</button>
+    </div>
+    <FeedbackBox schematicName="powertrain-can-bus" />
+  </div>
+)}
           
           <Modal 
             show={showModal} 
